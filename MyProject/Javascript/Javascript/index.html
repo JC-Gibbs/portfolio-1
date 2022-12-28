@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Survival On The Home Front</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {box-sizing: border-box;}
+
+body {font-family: Verdana, Arial, sans-serif;
+      background-color: #3147c5;
+}
+header, h1, #wrapper{ margin-top: 0; }
+#wrapper {  background-color: #dadae7; 
+	        width: 90%;
+			margin: auto;
+            color:  #19144b;
+} 
+h1, h2 { color: #1d1b31; }
+header { background-image: url(images/skyline.jpeg);
+         background-repeat: no-repeat;  	
+		 background-size: cover; 
+}
+h1 { text-align: center;
+      font-size: 300%;
+	 padding: 5% 0;
+     text-shadow: 3px 3px 3px #f4e8bc;	
+}
+nav, main, aside {  padding: 0 1em; 
+}
+img { width: 100%; 
+      height: auto;
+}
+nav ul { list-style-type: none; 
+         font-size: 1.2em;
+		 padding-left: 0;
+}
+nav a { text-decoration: none;}
+nav a:link { color: #330000; }
+nav a:visited { color: #003300; }
+nav a:hover { color: #1614c4; }
+nav {flex: 1;}
+main {flex: 7;}
+aside { flex: 2;}
+footer { text-align: center;
+         font-size: 80%;
+		 font-style: italic;
+		 color: #003300;
+		 padding: 2.5%;
+}
+#demo {display: flex;
+flex-direction: row;}
+@media only screen and (max-width: 1024px) {
+            body { margin: 0; padding: 0; } 
+            #wrapper { width: auto; margin: 0; }
+		   h1 { font-size: 200%; }
+			nav li { padding: 0 0.5em; 
+				     font-size: 1.2em;}
+       #demo {flex-direction: column;}
+       nav ul {display: flex;
+            flex-direction: row;
+          justify-content: center;}
+}		
+@media only screen and (max-width: 768px) {
+  nav {order: 1;}
+  nav ul {flex-wrap: wrap;}
+}
+header, main, nav, footer, figure, figcaption { display: block; }
+</style>
+</head>
+<body>
+<div id="wrapper">
+  <header>
+    <h1>Survival On The Home Front </h1>
+  </header>  
+  <div id="demo">
+  <nav>
+    <ul>
+	 <li><a href="index.html">Home</a></li>
+     <li><a href="resources.html">Resources</a></li>
+     <li><a href="services.html">Services</a></li>
+     <li><a href="contact.html">Contact</a></li>
+	</ul> 
+   </nav>
+   <main>   
+	<h2>Located in the Heart of Kansas City</h2>
+    <p> Located in the heart of Kansas City Survival On The Home Front LLC is centered to help those in our communities that are experience various harships.</p>
+    <h2>Resources</h2>
+    <p>The food pantry is available <strong>Monday-Friday 10am-3pm</strong>, walkin excepted.<br>The Clothing Closet is open every <strong>Tues,Wed,Fri 9am-3pm</strong>.<br>Applications for prescrition & utilities assiatance are available <strong>8am-11am Monday & Thursday</strong>.</p>
+  	<h2>Services</h2>
+    <p>Resource Counselor are available to guide you to the right resources and services to fit your need. Some services available are car seat and installation, resume building and interview mentors</p>
+   </main> 
+   <aside>
+   <img src="images/foodpantry.jpeg"  alt="Food Pantry">
+	 <h2>Food Pantry</h2>
+	 <p><strong>Open Mon-Sat 10am - 3pm</strong></p>
+   </aside>
+   </div> <!-- end of flex container -->
+   <footer>Copyright &copy; 2021<br>
+     <span>Today is<br><script>
+       var myDate = new Date ()
+       var month = myDate.getMonth() + 1
+       var day = myDate.getDate()
+       var year = myDate.getFullYear()
+       document.write(month + "/" + day + "/" + year)
+     </script></span>
+   </footer>
+</div>
+</body>
+</html>

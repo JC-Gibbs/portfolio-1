@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact Page</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="main.css">
+        <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+          <h1>Survival On The Home Front</h1>
+            </header>
+            <nav>
+              <ul> 
+                <li><a href="index.html">Home</a>
+                <li><a href="services.html">Services</a>
+                <li><a href="resources.html">Resources</a>
+                <li><a href="contact.html">Contact</a>
+                </ul>
+            </nav>
+
+            <main>
+                <h2>Contact Us</h2>
+                <p>Required Information is marked with an asterisk (*).</p>
+             <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+            <label for="myName">*Name:</label>
+            <input type="text" name="myName" id="myName" 
+            required="required" placeholder="your first and last name"><br><br>
+            <label for="myEmail">*E-mail:</label>
+            <input type="text" name="myEmail" id="myEmail" 
+            required="required" placeholder="you@yourdomain.com"><br><br>
+             <label for="myComments">*Comments</label>
+             <textarea name="myComments" id="myComments" rows="2" cols="20"
+             required="required"></textarea><br>
+             <input id="mySubmit" type="submit" value="Send Now">
+            
+        </form>
+                </main>
+
+                <footer>
+                    Copyright &copy; 2018 Survival On The Home Front LLC<br>
+                    <a href="mailto:yourfirstname@youulastname.com">jc@Gibbs.com</a><br>
+                </footer>
+            </div>
+        </body>
+    </html>
