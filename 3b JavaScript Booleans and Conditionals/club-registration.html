@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Club Registration</title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 1em;
+    }
+    #container {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      padding: 10px;
+      background-color: #faf6d7;
+    }
+    label {
+      font-weight: bold;   
+    }
+    label, input, button { 
+      margin: 10px 2px;  /* 10 top/bottom, 2 left/right */
+    }
+    button {
+      font-size: 1.5em;
+      height: 2em;
+      width: 150px;
+      padding: .25em;
+      border: 2px solid olive;
+      background-color: khaki;
+      color: olive;  /* text */
+    }
+    button:hover {  /* swap text & background */
+      background-color: olive;
+      color: khaki;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h2>Club Registration</h2>
+    <p>Memberships are $25 per year.</p>
+    <p>20% discount for senior citizens 65+ years</p>
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" onclick="reset()">
+    </div>
+    <div>
+      <label for="senior">Are you 65 years of age or older?</label>
+      <input type="checkbox" name="senior" id="senior" value="Yes" onclick="reset()">
+    </div>
+    <button onclick="display()">Join Now!</button>
+    <p id="output"></p>  
+  </div>
+  <script>
+    "use strict";
+    function display() {
+//input the user's name and leave as a string 
+let memberName = document.getElementById("name").value;
+let isSenior = Boolean(document.getElementById("senior").checked);
+//calculate fee
+let fee = 25; //standard fee
+if (isSenior){
+  fee *= .8; // 20% discount
+}
+//format the output string
+var out = "Welcome, " + memberName + ", to the club!<br>";
+out += "Your membership fee is $" + fee.toFixed(2);
+//display result 
+document.getElementById("output").innerHTML = out;
+    }
+    function reset() {
+      document.getElementById("output").innerHTML = "";
+    }
+  </script>
+</body>
+</html> 

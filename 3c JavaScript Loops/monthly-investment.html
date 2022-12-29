@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Monthly Investment Growth</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 1.1em;
+    }
+    #container {
+      width: 600px;
+      margin: auto;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      padding: 10px;
+      background-color: #cfe2cf; /* darkseagreen 85% */
+      color: darkslategray;
+    }
+    #container p {
+      margin: 5px 0px;
+    }
+    fieldset {
+      width: 500px;
+      display: flex;
+      flex-flow: column nowrap;
+      padding: 10px;
+      background-color: darkseagreen;
+    }
+    legend {
+      font-weight: bold;
+      font-size: 1em;
+    }
+    label {
+      margin-top: 10px;
+      padding: 1px;
+      font-size: .9em;
+    }
+    input, button {
+      font-size: 1.1em;
+      background-color: #cfe2cf;
+      color: darkslategray;
+    }
+    button {
+      height: 2em;
+      margin: 15px 0px;
+    }
+    button:hover{
+      background-color: darkslategray;
+      color: #cfe2cf;
+    }
+    table {
+font-family: 'Courier New', Courier, monospace;
+font-size: 1em;
+margin-top: 20px;
+border: 1px darkslategray solid;
+width: 60%;
+visibility: hidden;
+text-align: right;
+    }
+    caption{
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    th{
+      background-color: darkseagreen;
+    }
+    tr:nth-of-type(even){
+      background-color: #afcfaf; /* darkseagreen 75% */
+    }
+    
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h2>Monthly Investment Growth</h2>
+    <p>This calculator displays a table showing how an investment account grows monthly at a given APR (annual percentage rate).</p>
+    <p>Enter the amount you intend to invest, your target APR, and the number of years you want to track.</p>
+    <fieldset>
+      <legend>Enter data for calculation</legend>
+      <label for="principal">Initial Investment ($)</label> 
+      <input type="number" id="principal" min="0" step="100" value="40000">
+      <label for="apr">APR (%)</label>
+      <input type="number" id="apr" min="0" max="10" step="0.1" value="5">
+      <label for="term">Term (in years)</label>
+      <input type="number" id="term" min="1" max="60" step="1" value="20">
+      <button onclick="display()">Display Monthly Growth</button>
+    </fieldset>
+<table id="tbl">
+  <caption>Monthly Investment Growth</caption>
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Interest</th>
+      <th>Balance</th>
+    </tr>
+  </thead>
+  <tbody id="tbdy">
+    </tbody>
+  </tbody>
+</table>
+
+  </div>
+ <script>
+   "use strict"
+   let balance = parseFloat(document.getElementById("principal").value)
+   let apr = parseFloat(document.getElementById("apr").value)
+   let term = parseFloat(document.getElementById("term").value)
+   let outpara = document.getElementById()
+   for(let month = 1; month < term * 12; month ++)
+   
+
+   let interest,newBalance;lineout
+ </script>
+  </script>
+</body>
+</html>

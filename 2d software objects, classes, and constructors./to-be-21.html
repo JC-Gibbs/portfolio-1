@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>To be 21</title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 1em;
+    }
+    #container {
+      padding: 10px;
+      background-color: lemonchiffon;
+    }
+    .bold {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>To Be 21 Lab<br>JC Gibbs</h1>
+     <p><span class="bold">Today's Date:</span> <span id="span2"></span></p>
+    <p><span class="bold">To be 21 Years old<br> You must be born before:</span> <span id="span3"></span></p>
+     
+
+
+
+ </div>
+  
+  <script>
+    "use strict";
+    //create and display today's date
+    let date1 = new Date();
+   // document.getElementById("span1").innerHTML = date1.toString();
+    document.getElementById("span2").innerHTML = date1.toDateString();
+    //display today's date as month/day/year
+    var month = date1.getMonth() + 1;
+    var day = date1.getDate();
+    // subtract 21 from the year
+    var year = date1.getFullYear() + -21;
+    document.getElementById("span3").innerHTML = 
+    month + "/" + day + "/" + year;
+   
+
+ </script>
+</body>
+</html>

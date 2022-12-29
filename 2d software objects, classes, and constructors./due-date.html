@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Baby Due Date?</title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #container {
+      width: 600px;
+      text-align: center;
+      padding: 20px;
+      background-color: LightSkyBlue; 
+    }
+    p {
+      margin: 40px 0px;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Baby Due Date</h1>
+    <p><label for="dob">Day of last menstral period</label>&nbsp;&nbsp;<input type="date" id="dob"></p>
+    <p>Determine Due Date&nbsp;&nbsp;<button onclick="display()">Get Age</button></p>
+    <p>Due date is&nbsp;<span id="today"></span></p>
+  </div>
+  <script>
+    "use strict"
+    function display() {
+      //create today's date and display
+      
+    let dobIn = document.getElementById("dob").value;
+    dobIn += "T00:00:00";
+      let dob = new Date(dobIn);
+      let day = dob.getDate() + 280;
+      dob.setDate(day);
+      document.getElementById("today").innerHTML = dob.toDateString();
+      console.log(dobIn); //DEBUG: What is the input?
+      console.log(typeof(dobIn));  //DEBUG: what type is it 
+     }
+
+  </script>
+
+</body>
+</html> 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>How Old Are You?</title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #container {
+      width: 500px;
+      text-align: center;
+      padding: 10px;
+      background-color: LightSkyBlue; 
+    }
+    p {
+      margin: 10px 0px;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>How Old Are You?</h1>
+    <p><label for="dob">Enter your birth date</label>&nbsp;&nbsp;<input type="date" id="dob"></p>
+    <p>To calculate your age&nbsp;&nbsp;<button onclick="display()">Get Age</button></p>
+    <p>Today's date is&nbsp;<span id="today"></span></p>
+    <p>You were born on&nbsp;<span id="dobout"></span></p>
+    <p>Today you are&nbsp;<span id="age"></span>&nbsp;years old</p>
+ 
+  </div>
+  <script>
+    "use strict"
+    function display() {
+      //create today's date and display
+      let today = new Date();
+      document.getElementById("today").innerHTML = today.toDateString();
+      let dobIn = document.getElementById("dob").value;
+      console.log(dobIn); //DEBUG: What is the input?
+      console.log(typeof(dobIn));  //DEBUG: what type is it
+      //turn in into an object:
+      //date is input as ISO 'yyyy-mm-dd' string
+      //append time of midnight (T00:00:00) to it
+      //no ending Z after time means local time
+      dobIn += "T00:00:00";
+      let dob = new Date(dobIn);
+      document.getElementById("dobout").innerHTML = dob.toDateString();
+      console.log(dob);  //DEBUG: display the object 
+      console.log(dob.toISOString());  //DEBUG display as an ISO string
+      let age = today.getTime() - dob.getTime();
+      let years = age/3.154e+10;
+    document.getElementById("age").innerHTML = years.toFixed(0);
+     }
+
+  </script>
+
+</body>
+</html> 

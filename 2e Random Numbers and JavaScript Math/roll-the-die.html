@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Roll the Die</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 1.3em;
+    }
+    #container {
+      width: 50%;
+      /* auto margin centers div in body */
+      margin: auto;
+      /* organize div items centered in a column */
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      padding: 10px;
+      background-color: lightgray; 
+    }
+    h1, p, #dicegrid {
+      /* give margins of 10px top/bottom , 0 left/right */
+      margin: 10px 0px;
+    }
+    #dicegrid {
+      /* organize div items in a grid, 2 columns, each 100px wide */
+      display: grid;
+      grid-template-columns: 100px 100px;   
+      /* 15px gap around each grid cell */
+      grid-gap: 30px;                       
+    }
+    img {
+      /* image has 10px gray border */
+      border: 10px outset gray;   
+    }
+    img:hover {
+      /* border becomes purple when user mouses over it */
+      border-color: purple;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Roll the Die</h1>
+    <p>Click each die to "toss" it.</p>
+    <div id="dicegrid">
+      <img onclick="roll(this)" src="./dice-images/die1.jpg" style="width:100px;height:100px;">
+      <img onclick="roll(this)" src="./dice-images/die1.jpg" style="width:100px;height:100px;">
+    </div>
+  </div>
+  
+  <script>
+    "use strict";
+function roll(imageElement){
+  let r = getRndInteger(1,6);
+imageElement.src = "./dice-images/die" + r + ".jpg";
+
+}
+function getRndInteger(min, max){
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+  </script>
+
+</body>
+</html> 

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>HTML Drop-Down List</title>
+  <meta charset="utf-8">
+  <style>
+    #wrapper {
+      font-family: Arial, sans-serif;
+      color: darkslategray;
+      border: 3px solid #666;
+      background-color: whitesmoke;
+      padding: 10px 25px 10px 25px;
+      width: 650px;
+      height: 225px;
+    }
+
+    #order {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      /* horizontal */
+      background-color: lightgray;
+      padding: 10px;
+    }
+
+    p,
+    select,
+    button {
+      font-size: 1.2em;
+      text-align: center;
+      margin: 5px 0 5px 0;
+    }
+
+    select {
+      width: 250px;
+    }
+
+    button {
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="order">
+      <p>Chopped Salad (lettuce, radicchio, cucumber, tomato, avocado) <b>$7.25</b></p>
+      <p>Add extras:</p>
+      <select id="extra">
+        <option value="">No thanks</option>
+        <option value="Grilled Shrimp">Grilled Shrimp $5</option>
+        <option value="Grilled Chicken">Grilled Chicken $4</option>
+        <option value="Grilled Salmon">Grilled Salmon $6</option>
+      </select>
+      <button onclick="addToOrder()">Order</button>
+    </div>
+    <p id="output"></p>
+  </div>
+
+  <script>
+    "use strict";
+
+    function addToOrder() {
+      let extra = document.getElementById("extra").value
+      console.log(extra);
+
+      let price;
+
+      switch (extra) {
+        case "No Extras":
+          price = "7.25";
+          break;
+
+        case "Grilled Shrimp":
+          price = "12.23";
+          break;
+
+        case "Grilled Chicken":
+          price = "11.25";
+          break;
+
+        case "Grilled Salmon":
+          price = "13.25;"
+          break;
+      }
+      let finalorder = extra + "<br> Final Price $" + price;
+      document.getElementById("output").innerHTML = finalorder;
+    }
+  </script>
+</body>
+</html>

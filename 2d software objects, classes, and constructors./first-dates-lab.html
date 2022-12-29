@@ -1,0 +1,56 @@
+#<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>First Dates Lab</title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 1em;
+    }
+    #container {
+      padding: 10px;
+      background-color: lemonchiffon;
+    }
+    .bold {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>First Dates Lab<br>JC Gibbs</h1>
+    <p><span class="bold">Today's Date:</span> <span id="span1"></span></p>
+    <p><span class="bold">Today's Date:</span> <span id="span2"></span></p>
+    <p><span class="bold">Today's Date:</span> <span id="span3"></span></p>
+    <p><span class="bold">Basis</span> <span id="span4"></span></p>
+    <p><span class="bold">Future</span> <span id="span5"></span></p>
+
+
+
+
+ </div>
+  
+  <script>
+    "use strict";
+    //create and display today's date
+    let date1 = new Date();
+    document.getElementById("span1").innerHTML = date1.toString();
+    document.getElementById("span2").innerHTML = date1.toDateString();
+    //display today's date as month/day/year
+    var month = date1.getMonth() + 1;
+    var day = date1.getDate();
+    var year = date1.getFullYear();
+    document.getElementById("span3").innerHTML = 
+    month + "/" + day + "/" + year;
+  // display basis date 
+  let date2 = new Date(1972, 1, 29, 0, 0, 0, )
+  document.getElementById("span4").innerHTML = date2.toString();
+  //add 60 days to today
+  let date3 = new Date();
+  date3.setDate(date3.getDate()+60);
+  document.getElementById("span5").innerHTML = date3.toString();
+
+ </script>
+</body>
+</html>

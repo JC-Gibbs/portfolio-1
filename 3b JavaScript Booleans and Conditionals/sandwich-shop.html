@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sandwich Orders</title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 1em;
+    }
+    #container {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      padding: 10px;
+      background-color: lightcyan;
+    }
+
+    label {
+      display: inline-block; /* so width is recognized */
+      width: 90px;           /* so can right align */
+      text-align: right;
+      padding-right: 10px;
+      font-weight: bold;   
+    }
+    label, input, button { 
+      margin: 10px 2px;  /* 10 top/bottom, 2 left/right */
+    }
+    #extras input {
+      margin-left: 110px;  /* to left align with name, qty */
+    }
+    #extras label {
+      display: inline;  /* remove width restriction*/
+    }
+    button {
+      font-size: 1.5em;
+      height: 2em;
+      width: 150px;
+      padding: .25em;
+      margin-left: 110px;
+      border: 2px solid darkgreen;
+      background-color: palegreen;
+      color: darkgreen;  /* text */
+    }
+    button:hover {  /* swap text & background */
+      background-color: darkgreen;
+      color: palegreen;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h2>Sandwich Orders</h2>
+    <p>Made-to-order on freshly baked bread. Piled high with capicola, salami, pepperoni and provolone cheese. Finished with  lettuce, tomato and sprinkled oregano. Only $6.99 apiece. 10% discount on orders of 5 or more.</p>
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name"><br>
+      <label for="qty">Quantity:</label>
+      <input type="number" name="qty" id="qty" min="1" max="50" value="1" onclick="reset()"><br>
+      <div id="extras">
+        <input type="checkbox" name="meat" id="meat" value="Yes" onclick="reset()">
+        <label for="meat">Extra meat? (add $1.50 ea.)</label><br>
+        <input type="checkbox" name="cheese" id="cheese"  value="Yes" onclick="reset()">
+        <label for="cheese">Extra cheese? (add $1.00 ea.)</label>
+      </div>
+      <button onclick="display()">Place Order</button>
+    </div>
+    <p id="output"></p>  
+  </div>
+
+  <script>
+    "use strict";
+function display(){
+  let Name = document.getElementById("name").value;
+  let sandwich = document.getElementById("qty").value;
+  let meat = Boolean(document.getElementById("meat").checked);
+  let cheese = Boolean(document.getElementById("cheese").checked);
+  let fee = 6.99; //standard fee
+// if statement
+let meatPrice;
+let cheesePrice;
+let extraMeat;
+let extraCheese;
+
+if (meat){
+  meatPrice = 1.50;// xtra meat
+}
+else {
+  meatPrice =0;
+}
+if (cheese){
+  cheesePrice = 1.00; //xtra cheese
+}
+else {
+  cheesePrice = 0;
+}
+//output string
+let price = fee + cheesePrice + meatPrice;
+let subtotal = price * sandwich;
+let tax = subtotal * .08 //tax
+let total = subtotal + tax; //before discount 
+
+let discount;
+if (sandwich >= 5){
+  discount = total * .1;
+}
+else {
+  discount = 0;
+}
+let total2 = total = discount; //after discount 
+
+let out = "Order details for, " + Name + "<br>"
+out += "Sandwich price, $" + price.toFixed(2) + "<br> Quantity ordered,"
++ sandwich + "<br> Subtotal, $" + subtotal.toFixed(2) + "<br>Sales tax (at 8%), $" + tax.toFixed(2) + "<br>Total charge, $" +
+total2.toFixed(2);
+//results
+document.getElementById("output").innerHTML = out;
+
+}
+function reset() {
+  document.getElementById("output").innerHTML = "";
+}
+
+  </script>
+</body>
+</html> 

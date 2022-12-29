@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>One Potato, Two Potato</title>
+  <style>
+    body {
+      font-family: Garamond, Georgia, serif;
+      font-size: 1.5em;
+    }
+    #container {
+      width: 50%;
+      margin: auto;
+      text-align: center;
+      padding: 10px;
+      background-color: Linen;     
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h2>One Potato, Two Potato</h2>
+    <p id="output"></p>
+  </div>
+  <script>
+    "use strict"
+    //construct the rhyme
+    let out = "";
+    for(let k = 1; k <= 8; k++){
+      if (k ===1){
+        out += k + " potato<br>";
+      }else if (k === 4){
+        out += "FOUR<br>";
+      }else if (k === 8){
+        out += "MORE<br>";
+      }else {
+        out += k + " potatoes<br>";
+      }
+    }
+    //display result in the output element
+    document.getElementById("output").innerHTML = out;
+  </script>
+  
+</body>
+</html> 
