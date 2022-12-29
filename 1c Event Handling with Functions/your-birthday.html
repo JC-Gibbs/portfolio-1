@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        #wrapper{
+            border: 3px solid #666;
+            padding: 0px 10px 15px;
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper"> 
+    <h1>Your Birthday</h1>
+    <label for="name">Your name:</label>
+    <input type="text" id="name" onclick="erase()"><br><br>
+     <button onclick="show()">Print Happy Birthday</button><br><br>
+     <p>JC Gibbs</p>
+    <p id="para"></p>
+
+    <script>
+        "use strict"
+
+        function show() {
+            let name =
+                document.getElementById("name").value;
+            document.getElementById("para").innerHTML =
+                "Happy birthday to you,<br\>" +
+                "Happy birthday to you,<br\>" +
+            "Happy birthday dear" + " " +  name + ",<br\>" +
+                "Happy birthday to you.";
+        }
+
+        function erase() {
+            document.getElementById("para").innerHTML = "";
+
+        }
+    </script>
+    </div>
+</body>
+
+</html>

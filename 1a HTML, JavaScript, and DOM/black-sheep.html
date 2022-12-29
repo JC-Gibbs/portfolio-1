@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<head>
+  <meta charset="utf-8">
+  <title>Welcome to JavaScript</title>
+  <style>
+    body {
+      width: 40%;
+      text-align: center;
+      font-family: Garamond, serif;
+    }
+    #wrapper {
+      border: 3px solid #666; 
+      padding: 0px 10px 15px;
+    }
+  </style>
+</head>
+<body> 
+  <div id="wrapper">
+    <h1 id="head">Placeholder heading</h1>
+    <p id="para">Placeholder text</p>
+  </div>
+
+  <script>
+    document.getElementById("head").innerHTML = 
+        "Black Sheep";
+    document.getElementById("para").innerHTML = 
+          "Baa, baa, black sheep,<br>\
+           Have you any wool?<br>\
+           Yes, sir, yes, sir,<br>\
+           Three bags full.<br>\
+           JC Gibbs";
+  </script>
+</body>
+</html>

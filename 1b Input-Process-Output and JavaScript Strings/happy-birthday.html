@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Happy Birthday</title>
+<style>
+    #wrapper {
+border: 3px solid #666;
+padding: 0px 10px 15px;
+width: 400px;
+height: 230px;
+    }
+</style>
+
+</head>
+<body>
+<div id="wrapper">
+    <h1 id="head"></h1>
+    <p id="para"></p>
+</div>
+<script>
+    "use strict";
+    let name;
+    name = window.prompt("What is your name?", "JC Gibbs");
+    document.getElementById("head").innerHTML = "Happy Birthday, " + name;
+    document.getElementById("para").innerHTML = 
+    "Happy birthay to you,<br>" +
+    "Happy birthay to you,<br>" +
+    "Happy birthday dear " + name + ",<br>" +
+    "Happy birthday to you.";
+</script>
+</body>
+</html>
