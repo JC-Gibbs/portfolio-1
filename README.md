@@ -1,1 +1,3 @@
-List of work completed in Computer Studio Systems I at Kansas State University 
+List of work completed at Kansas State University 
+
+7.11 Working with Flexbox 
