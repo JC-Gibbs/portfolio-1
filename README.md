@@ -16,4 +16,5 @@ Javascript - Using javascript to make interactive webpages.
 3C - JavaScript Loops
 3D - JavaScript switch Statement
 4A-2 - Arrays and Data Control
-
+5C - HTML Constraint Validation
+5D-2 - Pattern matching with Regular Expressions
