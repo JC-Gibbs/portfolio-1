@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Yahtzee Dice JC Gibbs</title>
+  <style>
+    #container {
+      font-family: Arial, sans-serif;
+      /* organize div items centered in a column */
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      padding: 10px;
+      background-color: lightgray; 
+    }
+    h1, p, #dicegrid {
+      /* give margins of 10px top/bottom , 0 left/right */
+      margin: 10px 0px;
+    }
+    #dicegrid {
+      /* organize div items in a grid, 5 columns, each 100px wide */
+      display: grid;
+      grid-template-columns: 100px 100px 100px 100px 100px;   
+      /* 15px gap around each grid cell */
+      grid-gap: 30px;                       
+    }
+    img {
+      /* image (initially) has 10px gray border */
+      border: 10px outset gray;   
+    }
+    button {
+      font-size: 2em;
+      width: 6em;
+      padding: .25em;
+      margin: 5px 5px 10px 0px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Yahtzee Dice JC Gibbs</h1>
+    <div id="dicegrid">
+      <img src="./dice-images/die1.jpg" onclick="toggle(0)" style="width:100px;height:100px;">
+      <img src="./dice-images/die1.jpg" onclick="toggle(1)" style="width:100px;height:100px;">
+      <img src="./dice-images/die1.jpg" onclick="toggle(2)" style="width:100px;height:100px;">
+      <img src="./dice-images/die1.jpg" onclick="toggle(3)" style="width:100px;height:100px;">
+      <img src="./dice-images/die1.jpg" onclick="toggle(4)" style="width:100px;height:100px;">
+    </div>
+    <div>
+      <button id="unfreeze">Start Round</button>   
+      <button id="roll" onclick="roll()">Roll</button>
+    </div>
+  </div>
+  <script>
+    "use strict"
+    let hold = [false, false, false, false, false];
+
+    function toggle(k){
+      //hold or free the k-th image
+      if(!hold[k]){
+        document.images[k].style.borderColor = "red";
+        hold[k] = true;
+      }else {
+        document.images[k].style.borderColor = "gray";
+        hold[k] = false;
+      }
+      console.log(hold);  //DEBUG to see if it works. 
+
+    }
+  
+   function roll(){
+   
+     for (let k = 0; k <hold.length; k++){
+      if (!hold[k]){
+       let r = getRndInteger(1,6);
+         document.images[k].src = "./dice-images/die" + r + ".jpg"; 
+      }
+    }
+}
+function getRndInteger(min, max){
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+  </script>
+
+</body>
+</html> 
