@@ -15,3 +15,5 @@ Javascript - Using javascript to make interactive webpages.
 3B - JavaScript Booleans and Conditionals
 3C - JavaScript Loops
 3D - JavaScript switch Statement
+4A-2 - Arrays and Data Control
+
