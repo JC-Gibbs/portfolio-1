@@ -1,4 +1,4 @@
-Some work completed at Kansas State University 
+Some my work completed at Kansas State University 
 
 7.11 - Working with HTML5 flex container and grid container 
 11.7 - Created interactive transitions including drop-down menus and summary details.
