@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HTML Constraint Validation Lab Activity</title>
+  <meta charset="utf-8">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      color: saddlebrown;
+    }
+    #container {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      padding: 10px;
+    }
+    form {
+      background-color: cornsilk;
+      min-width: 500px;
+      padding: 10px; 
+    }
+    label { 
+      display: inline-block; /* so width is recognized */
+      width: 100px;          /* so can right align */
+      text-align: right; 
+      font-weight: bold;
+      padding-right: 10px;
+      margin-top: 10px; 
+    }
+    input {
+      display: inline-block; 
+      height: 2em;
+      width: 300px;
+      margin-top: 10px;
+    }
+    input[type=submit], input[type=reset] {
+      display: block;
+      font-size: 1.5em;
+      height: 2em;
+      width: 200px;
+      padding: .25em;
+      margin: 15px auto 0;  /* top 15, r/l auto, bottom 0 */
+      border: 2px solid saddlebrown;
+      background-color: wheat;
+      color: saddlebrown; /* text */
+    }
+    input[type=submit]:hover, input[type=reset]:hover {  /* swap text & background */
+      background-color: saddlebrown;
+      color: wheat;
+    }
+    .note {
+      font-size: .7em;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h2>HTML Constraint Validation Lab Activity JC Gibbs</h2>
+    <form name="form" method="post" action="https://webdevbasics.net/scripts/demo.php" target="_blank">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name">
+      <span class="note">Required</span><br>
+      <label for="text">E-Mail:</label>
+      <input type="email" name="email" id="email" required>
+      <span class="note">Required</span><br>
+      <label for="zip">ZIP Code:</label>
+
+      <input type="text" name="zip" id="zip" minlength="5" ><br>  
+      <label for="st">State:</label>
+      <input type="text" id="state" name="state" value="Kansas" readonly><br>
+       <label for="tel">Phone:</label>
+      <input type="text" name="tel" id="tel"><br>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" min="18" max="90">
+      <span class="note">Required</span><br>
+      <input type="submit" class="btn" value="Submit">
+      <input type="reset" class="btn">
+    </form>
+  </div>
+  
+  <script>
+    "use strict"
+
+  </script>
+  
+</body>
+</html>
