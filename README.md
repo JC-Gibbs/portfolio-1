@@ -6,3 +6,12 @@ Lighthouse Island Bistro - Interactive navigation menu with CSS, Transform prope
 Fishcreek 11 - Use HTML5 audio and video elements.
 Technical Writing - Work created in Technical Writing Class 
 Javascript - Using javascript to make interactive webpages. 
+1A - HTML, JavaScript and DOM
+1B - Input-Process-Output and JavaScript Strings
+1C - Event Handling with Functions
+1E - Using I-P-O programming model with numbers
+2D - Practice using JavaScript Date Class
+2E - JavaScript Math and Random Numbers
+3B - JavaScript Booleans and Conditionals
+3C - JavaScript Loops
+3D - JavaScript switch Statement
