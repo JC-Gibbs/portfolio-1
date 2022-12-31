@@ -39,4 +39,6 @@ Javascript - Using javascript to make interactive webpages.
 
 * Textbook Web Development & Design Foundations with HTML5 9th edition by Terry Felke-Morris
 
+* Ways to improve work can be done by Get functional, Keep up with the latest specs, Embrace asynchrony, Know where the language ends and the framework begins, Learn about prototypal inheritance, Bling out your code editor, Test your code, even if you are just coding to learn, Build an environment from scratch, Teach others what you’ve learned, and Be humble and ask questions.
+
 
