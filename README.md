@@ -8,7 +8,7 @@ Lighthouse Island Bistro - Interactive navigation menu with CSS, Transform prope
 
 Fishcreek 11 - Use HTML5 audio and video elements.
 
-Technical Writing - Work created in Technical Writing Class .
+Technical Writing - Learned how to identify target audience, how to select appropriate document formats, use valuable visuals and graphics and successfully convey complicated content to readers.
 
 Javascript - Using javascript to make interactive webpages. 
 1A - HTML, JavaScript and DOM.
