@@ -1,4 +1,4 @@
-Some my work completed at Kansas State University 
+Some my work completed and what I learned. 
 
 7.11 - Working with HTML5 flex container and grid container.
 
@@ -33,4 +33,10 @@ Javascript - Using javascript to make interactive webpages.
 
 5C - HTML Constraint Validation.
 
-5D-2 - Pattern matching with Regular Expressions
+5D-2 - Pattern matching with Regular Expressions.
+
+* Reference used for most of these assignments were W3shchool at https://www.w3schools.com/
+
+* Textbook Web Development & Design Foundations with HTML5 9th edition by Terry Felke-Morris
+
+
