@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pattern Validation Lab Activity</title>
+  <meta charset="utf-8">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      color: saddlebrown;
+    }
+    #container {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      padding: 10px;
+    }
+    form {
+      background-color: cornsilk;
+      min-width: 500px;
+      padding: 10px; 
+    }
+    label { 
+      display: inline-block; /* so width is recognized */
+      width: 150px;          /* so can right align */
+      text-align: right; 
+      font-weight: bold;
+      padding-right: 10px;
+      margin-top: 10px; 
+    }
+    input {
+      display: inline-block; 
+      height: 2em;
+      width: 300px;
+      margin-top: 10px;
+    }
+    input[type=submit], input[type=reset] {
+      display: block;
+      font-size: 1.5em;
+      height: 2em;
+      width: 200px;
+      padding: .25em;
+      margin: 15px auto 0;  /* top 15, r/l auto, bottom 0 */
+      border: 2px solid saddlebrown;
+      background-color: wheat;
+      color: saddlebrown; /* text */
+    }
+    input[type=submit]:hover, input[type=reset]:hover {  /* swap text & background */
+      background-color: saddlebrown;
+      color: wheat;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h2>Pattern Validation Lab Activity</h2>
+    <h3>JC Gibbs</h3>
+    <form name="form" method="post" action="https://webdevbasics.net/scripts/demo.php" target="_blank">
+      <label for="state">State:</label>
+      <input type="text" name="state" id="state" placeholder="MO" pattern="[A-Z]{2}" title="Enter two digit State " required><br> 
+      <label for="zip">ZIP:</label>
+      <input type="text" name="zip" id="zip" placeholder="11111 or 11111-1111" pattern="\d{5}-?(\d{4})?" title="enter 5 or 9 digit zip code" required><br>
+      <label for="tel">Phone:</label> 
+      <input type="tel" id="phone" name="phone" placeholder="123-45-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="enter 9 digit phone number with dash example 555-555-5555 " required><br><br>
+  <input type="submit" value="Submit">
+      <label for="dob">Birthdate:</label>
+      <input type="text" pattern="\d{1,2}\/\d{1,2}\/\d{4}" class="datepicker" name="date" value="" placeholder="mm/dd/yyyy" title="enter date of birth example 1/1/22" title="enter date of birth mm/dd/yyyy" required/><br>
+
+      <label for="plate">License Plate:</label>
+      <input type="text" name="licenseplate" class="licenseplate" pattern="[A-Z]{3}-[0-9]{3}" maxlength="7" placeholder="ABC-123" title="license plate ABC-123" required/><br>
+       <label for="expire">Expires:</label>
+      <input type="text" name="expire" id="expire" pattern="[0-9]{2}/[0-9]{2}" placeholder="mm/yy" title="enter 2 digit month and 2 digit year example 12/22" required><br>
+      <label for="scode">Security Code:</label>
+      <input type="text" name="scode" id="scode" maxlength="3" pattern="[A-Za-z0-9]{3}" title="3 digit alphanumeric code" required>
+      <div id="buttons">
+        <input type="submit" class="btn" value="Submit">
+        <input type="reset" class="btn">
+      </div>
+    </form>
+  </div>
+  \d{1,2}\/\d{2}
+  <script>
+    "use strict"
+
+  </script>
+  
+</body>
+</html>
